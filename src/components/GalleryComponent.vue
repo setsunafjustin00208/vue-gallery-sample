@@ -88,18 +88,17 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
 .gallery-item:hover .card-overlay {
-  display: flex;
   opacity: 1;
 }
 

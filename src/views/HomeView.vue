@@ -1,9 +1,10 @@
 <template>
   <div class="container">
     <section class="hero box m-6" :style="heroStyle">
+      <img src="@/assets/images/SAAP.jpg" alt="Background Image" class="background-image">
       <div class="hero-body">
-        <p class="title">The Chapels</p>
-        <p class="subtitle">Featuring The Chapels of Each Barangay</p>
+        <p class="title text-border">The Chapels</p>
+        <p class="subtitle text-border text-background">Featuring The Chapels of Each Barangay</p>
       </div>
     </section>
     <div class="tabs is-centered is-boxed">
@@ -136,5 +137,37 @@ export default {
 <style scoped>
 .tab-animation {
   transition: all 0.3s ease;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-body {
+  position: relative;
+  z-index: 2;
+  color: white; /* Ensure text is visible */
+}
+
+.text-border {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow to create a border effect */
+}
+
+.text-background {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background color */
+  padding: 5px; /* Add some padding around the text */
+  border-radius: 5px; /* Optional: Add rounded corners */
 }
 </style>
